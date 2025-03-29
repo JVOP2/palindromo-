@@ -1,0 +1,29 @@
+<form>
+  <div class="p-5">
+    <h1 class="text-center">Identificador de Palíndromos</h1>
+
+    <div class="row mt-5">
+      <div class="p-3 border border-white rounded-5">
+        <h4>Definição:</h4>
+        <p>
+          Uma palavra ou número palíndromo é aquele que pode ser lido
+          igualmente da esquerda para a direita ou da direita para a esquerda.
+          Exemplos: ovo, arara, 878, 1221.
+        </p>
+      </div>
+    </div>
+
+    <!-- Input para digitar a palavra ou número -->
+    <div class="row my-5 text-center">
+      <label class="form-label">Teste uma palavra ou número:</label>
+      <input type="text" class="form-control" (input)="checkPalind()" [(ngModel)]="text" name="text">
+    </div>
+
+    <!-- Resultado: mensagem e imagem -->
+    <div class="row justify-content-center text-center">
+      <p>{{ message }}</p>
+      <img class="w-25" src={{img}}>
+    </div>
+  </div>
+</form>
+
